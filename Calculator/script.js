@@ -1,48 +1,56 @@
-window.onload = function() {
-    var input = document.getElementById("inputBox");
-    var container = document.getElementById("container");
-
-    container.addEventListener("click", function(e) {
-        buttonClick(e.target.id);
+window.onload = function () {
+    const input = document.getElementById("inputBox");
+    const container = document.getElementById("container");
+  
+    container.addEventListener("click", function (e) {
+      buttonClick(e.target.id);
     });
-
-    var calc = document.getElementById("Button=");
-    calc.addEventListener("click",calculate);
-
-    var C = document.getElementById("ButtonC");
-    C.addEventListener("click", erase);
-
+  
+    document.getElementById("Button=").addEventListener("click", calculate);
+    document.getElementById("ButtonC").addEventListener("click", erase);
+  
+    document.addEventListener("keydown", function (e) {
+      const key = e.key;
+      if ("0123456789+-*/().%".includes(key)) {
+        input.value += key;
+      } else if (key === "Enter") {
+        calculate();
+      } else if (key === "Backspace") {
+        input.value = input.value.slice(0, -1);
+      }
+    });
+  
     function buttonClick(buttonId) {
-        if((buttonId != "ButtonC") && (buttonId != "Button=")) {
-            var button = document.getElementById(buttonId);
-             var s = buttonId;
-             s = s.replace("Button", "");
-             entries(s);
-        }
+      if (buttonId !== "ButtonC" && buttonId !== "Button=") {
+        const val = buttonId.replace("Button", "");
+        if (val === "*") input.value += "*";
+        else if (val === "x") input.value += "*";
+        else input.value += val;
+      }
     }
-
-    function entries(s) {
-        input.value += s;
-        /* button1: s = "1"
-        input.value = undefined
-        entries("1")
-        input.value =+ s
-        input.value = input.value + s = undefined + "1" = "1"
-        button2 : s = "2"
-        input.value ="1"
-        entries("2")
-        input.value = input.value + s = "1" + "2" ="12"
-        */
-    }
-
+  
     function calculate() {
-        if(input.value == ".") {
-            alert("Please Enter a Mathematical Expression");
-        }
+      if (input.value === ".") {
+        alert("Please enter a valid expression.");
+        return;
+      }
+      try {
         input.value = eval(input.value);
+      } catch {
+        alert("Invalid input");
+      }
     }
-
+  
     function erase() {
-        input.value = "";
+      input.value = "";
     }
-};
+  
+    // Theme toggle
+    const themeToggle = document.getElementById("themeToggle");
+    const themeText = document.querySelector(".theme-text");
+    themeToggle.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
+      themeText.textContent = document.body.classList.contains("dark") ? "Dark" : "Light";
+    });
+  };
+  
