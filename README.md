@@ -14,6 +14,6 @@ This internship focused on improving practical skills in front-end and basic bac
 
 A responsive landing page designed for the band <b>Lord Huron</b>. Built with HTML and CSS to match the band's indie-folk vibe.
 
-### Task 3: Calculator App
+### Task 2: Calculator App
 
 A simple yet functional calculator web app built using JavaScript. It handles basic arithmetic operations.
