@@ -1,94 +1,93 @@
 @font-face {
-    src:url(fonts/OneDirection.ttf)format("truetype");
-    font-family: nos;
+    src: url(fonts/LordHuron.ttf) format("truetype"); /* Replace with actual Lord Huron style font */
+    font-family: huron;
 }
-.paragraph{
+
+.paragraph {
     text-align: center;
     font-size: 30px;
-    font-family:sans-serif;
+    font-family: sans-serif;
     color: white;
 }
-.paragraph2{
-    text-align:center;
+
+.paragraph2 {
+    text-align: center;
     font-size: 100px;
-    font-family: nos;
+    font-family: huron;
     color: white;
 }
-.menu-bar
-{
-text-align:center;
-background-color: #000000;
+
+.menu-bar {
+    text-align: center;
+    background-color: #000000;
 }
-.menu-bar ul
-{
-   display: inline-flex;
-   color:floralwhite
+
+.menu-bar ul {
+    display: inline-flex;
+    color: floralwhite;
 }
-.menu-bar ul li
-{
-    font-family: Impact;
+
+.menu-bar ul li {
+    font-family: 'Georgia', serif; /* Earthy, rustic tone */
     width: 120px;
     margin: 15px;
     padding: 15px;
-
 }
 
-.menu-bar ul li:hover
-{
-
+.menu-bar ul li:hover {
     background: floralwhite;
     color: #000000;
-    border-radius:3px;
+    border-radius: 3px;
 }
-.paragraph5{
+
+.paragraph5 {
     font-size: 20px;
-    font-family:Courier;
+    font-family: 'Courier New', Courier, monospace;
     margin: 30px;
     color: white;
 }
 
-
-
-.lets-go-btn{
+.lets-go-btn {
     color: floralwhite;
-    background: rgb(227, 26, 26);
+    background: #2c3e50; /* darker, folk aesthetic */
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 1000;
     letter-spacing: 5px;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-left: -15px; 
-}
-.lets-go-btn:hover{
-    background: rgb(54, 1, 1);
+    margin-left: -15px;
 }
 
-.icons{
+.lets-go-btn:hover {
+    background: #1a252f;
+}
+
+.icons {
     display: flex;
     font-size: 3rem;
-    margin-top:0;
+    margin-top: 0;
     line-height: 0;
     align-items: flex-end;
-    display: flex;
     gap: 1px;
     justify-content: center;
-    
 }
 
-.icons a { margin-right:75px; }
+.icons a {
+    margin-right: 75px;
+}
 
-.icons :hover{
+.icons :hover {
     transform: scale(1.5);
 }
 
-.footer{
-    background-color:black;
-    margin-top:28%;
+.footer {
+    background-color: black;
+    margin-top: 28%;
 }
-.p1{
+
+.p1 {
     color: floralwhite;
     font-size: larger;
     padding-bottom: 10px;
-    
 }
